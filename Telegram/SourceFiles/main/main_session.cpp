@@ -136,9 +136,7 @@ Session::Session(
 #ifndef OS_MAC_STORE
 		_account->appConfig().value(
 		) | rpl::start_with_next([=] {
-			_premiumPossible = !_account->appConfig().get<bool>(
-				"premium_purchase_blocked",
-				true);
+			_premiumPossible = false;
 		}, _lifetime);
 #endif // OS_MAC_STORE
 
