@@ -1207,6 +1207,7 @@ bool HistoryInner::eventHook(QEvent *e) {
 
 HistoryInner::VideoUserpic *HistoryInner::validateVideoUserpic(
 		not_null<PeerData*> peer) {
+	return nullptr;
 	if (!peer->isPremium()
 		|| peer->userpicPhotoUnknown()
 		|| !peer->userpicHasVideo()) {
