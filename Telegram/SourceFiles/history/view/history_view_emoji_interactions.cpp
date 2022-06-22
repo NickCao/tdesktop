@@ -94,6 +94,7 @@ void EmojiInteractions::play(
 bool EmojiInteractions::playPremiumEffect(
 		not_null<const Element*> view,
 		Element *replacing) {
+	return true;
 	const auto already = ranges::contains(_plays, view, &Play::view);
 	if (replacing) {
 		const auto i = ranges::find(_plays, replacing, &Play::view);
