@@ -4,7 +4,8 @@
 # For license and copyright information please follow this link:
 # https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
-add_library(td_scheme OBJECT)
+add_library(td_scheme SHARED)
+install(TARGETS td_scheme)
 init_non_host_target(td_scheme)
 add_library(tdesktop::td_scheme ALIAS td_scheme)
 

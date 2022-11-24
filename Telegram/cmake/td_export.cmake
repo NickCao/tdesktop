@@ -4,7 +4,8 @@
 # For license and copyright information please follow this link:
 # https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
-add_library(td_export OBJECT)
+add_library(td_export SHARED)
+install(TARGETS td_export)
 init_non_host_target(td_export)
 add_library(tdesktop::td_export ALIAS td_export)
 

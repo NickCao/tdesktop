@@ -4,7 +4,8 @@
 # For license and copyright information please follow this link:
 # https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
-add_library(td_mtproto OBJECT)
+add_library(td_mtproto SHARED)
+install(TARGETS td_mtproto)
 init_non_host_target(td_mtproto)
 add_library(tdesktop::td_mtproto ALIAS td_mtproto)
 

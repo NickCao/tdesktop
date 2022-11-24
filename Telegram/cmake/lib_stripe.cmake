@@ -4,7 +4,8 @@
 # For license and copyright information please follow this link:
 # https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
-add_library(lib_stripe OBJECT)
+add_library(lib_stripe SHARED)
+install(TARGETS lib_stripe)
 add_library(desktop-app::lib_stripe ALIAS lib_stripe)
 init_target(lib_stripe)
 

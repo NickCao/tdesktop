@@ -4,7 +4,8 @@
 # For license and copyright information please follow this link:
 # https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
-add_library(lib_ffmpeg OBJECT)
+add_library(lib_ffmpeg SHARED)
+install(TARGETS lib_ffmpeg)
 add_library(desktop-app::lib_ffmpeg ALIAS lib_ffmpeg)
 init_target(lib_ffmpeg)
 
